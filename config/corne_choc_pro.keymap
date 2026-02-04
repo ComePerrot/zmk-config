@@ -28,9 +28,9 @@
             //                    | ENT | CTRL| SPC |               | BSPC| ALTG | DEL | 
             bindings = <
                 &kp TAB   &kp Q &kp W &kp E &kp R &kp T &none  &none &kp Y &kp U &kp I     &kp O    &kp P    &kp LGUI
-                &kp ESC   &kp A &kp S &kp D &kp F &kp G &none  &none &kp H &kp J &kp K     &kp L    &kp SEMI &kp LALT
+              &lt 3 ESC   &kp A &kp S &kp D &kp F &kp G &none  &none &kp H &kp J &kp K     &kp L    &kp SEMI &kp LALT
                 &kp LSHFT &kp Z &kp X &kp C &kp V &kp B              &kp N &kp M &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-                                &kp RET &kp LCTRL &kp SPACE          &kp BSPC &kp RALT &kp DEL
+                                &kp RET &kp LCTRL &lt 2 SPACE        &lt 1 BSPC &kp RALT &kp DEL
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
@@ -66,12 +66,12 @@
         };
 
         extra_layer_1 {
+            display-name = "MOUSE/NUM";
             // -----------------------------------------------------------------------------------------
             // | TRNS|     |       | MV_UP|        | SCRL_UP|     |     | KP_/|KP_N7|KP_N8|KP_N9| KP_-| TRNS|
             // | TRNS|     |MV_LEFT|MV_DWN|MV_RIGHT|SCRL_DWN|     |     | KP_*|KP_N4|KP_N5|KP_N6| KP_+| TRNS|
             // | TRNS|     |       |      |        |        |           | KP_0|KP_N1|KP_N2|KP_N3| KP_.| TRNS|
             //                     | TRNS |  TRNS  |  TRNS  |           | TRNS| TRNS| TRNS|
-            display-name = "MOUSE/NUM";
             bindings = <
                 &trans &none &none  &trans &none  &trans &none  &none &kp KP_DIVIDE   &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS &trans
                 &trans &none &trans &trans &trans &trans &none  &none &kp KP_MULTIPLY &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS  &trans
