@@ -20,7 +20,7 @@
         special_colon: special_colon {
             compatible = "zmk,behavior-mod-morph";
             label = "SPECIAL_COLON";
-            bindings = <&kp RS(N)>, <&kp DOT>;
+            bindings = <&kp RS(N)>, <&kp RS(DOT)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
