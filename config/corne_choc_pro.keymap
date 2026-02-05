@@ -56,7 +56,7 @@
         };
 
         lower_layer {
-            display-name = "NUMBER";
+            display-name = "NUM";
             // -----------------------------------------------------------------------------------------
             // | TRNS|  F1 |  F2 |  F3 |  F4 |  F5 |     |     |  F6 |  F7 |  F8 |  F9 |  F0 | TRNS|
             // | TRNS|  1  |  2  |  3  |  4  |  5  |     |     |  6  |  7  |  8  |  9  |  0  | TRNS|
@@ -75,18 +75,18 @@
             // -----------------------------------------------------------------------------------------
             // | TRNS| PREV |  PP  | NEXT |     |     |     |     | HOME|PG_DN|PG_UP| END |     | TRNS|
             // | TRNS| MUTE |VOL_DN|VOL_UP|     |     |     |     | LEFT| DOWN|  UP |RIGHT|     | TRNS|
-            // | TRNS|      |      |      |     |     |           |     |     |     |     |     | TRNS|
+            // | TRNS|      |      |      |     | RGB |           |     |     |     |     |     | TRNS|
             //                     | TRNS | TRNS| TRNS|           | TRNS| TRNS| TRNS|
             bindings = <
                 &trans &kp C_PREV &kp C_PP     &kp C_NEXT   &none  &none &none  &none &kp HOME &kp PG_DN &kp PG_UP &kp END   &none &trans
                 &trans &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &none  &none &none  &none &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none &trans
-                &trans &none      &none        &none        &none  &none              &none    &none     &none     &none     &none &trans
+                &trans &none      &none        &none        &none  &rgb_ug RGB_TOG    &none    &none     &none     &none     &none &trans
                                                &trans       &trans &trans             &trans   &trans    &trans
             >;
         };
 
         extra_layer_1 {
-            display-name = "MOUSE/NUM";
+            display-name = "MOUSE";
             // -----------------------------------------------------------------------------------------
             // | TRNS|     |       | MV_UP|        | SCRL_UP|     |     | KP_/|KP_N7|KP_N8|KP_N9| KP_-| TRNS|
             // | TRNS|     |MV_LEFT|MV_DWN|MV_RIGHT|SCRL_DWN|     |     | KP_*|KP_N4|KP_N5|KP_N6| KP_+| TRNS|
