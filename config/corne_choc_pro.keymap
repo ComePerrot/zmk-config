@@ -89,15 +89,15 @@
         extra_layer_1 {
             display-name = "MOUSE";
             // -----------------------------------------------------------------------------------------
-            // | TRNS|     |       | MV_UP|        | SCRL_UP|     |     | KP_/|KP_N7|KP_N8|KP_N9| KP_-| TRNS|
+            // | TRNS| BTCR|       | MV_UP|        | SCRL_UP|     |     | KP_/|KP_N7|KP_N8|KP_N9| KP_-| TRNS|
             // | TRNS|     |MV_LEFT|MV_DWN|MV_RIGHT|SCRL_DWN|     |     | KP_*|KP_N4|KP_N5|KP_N6| KP_+| TRNS|
-            // | TRNS|     |       |      |        |        |           | KP_0|KP_N1|KP_N2|KP_N3| KP_.| TRNS|
+            // | TRNS| BT1 |  BT2  |  BT3 |  BT4   |  BT5   |           | KP_0|KP_N1|KP_N2|KP_N3| KP_.| TRNS|
             //                     | MCLK |  LCLK  |  RCLK  |           | TRNS| TRNS| TRNS|
             bindings = <
-                &trans &none &none          &mmv MOVE_UP   &none           &msc SCRL_UP   &none  &none &kp KP_DIVIDE   &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS &trans
-                &trans &none &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_DOWN &none  &none &kp KP_MULTIPLY &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS  &trans
-                &trans &none &none          &none          &none           &none                       &kp KP_N0       &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DOT   &trans
-                                            &mkp MCLK      &mkp LCLK       &mkp RCLK                   &trans          &trans    &trans       
+                &trans &bt BT_CLR   &none          &mmv MOVE_UP   &none           &msc SCRL_UP   &none  &none &kp KP_DIVIDE   &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS &trans
+                &trans &none        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_DOWN &none  &none &kp KP_MULTIPLY &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS  &trans
+                &trans &bt BT_SEL 0 &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4                &kp KP_N0       &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DOT   &trans
+                                                   &mkp MCLK      &mkp LCLK       &mkp RCLK                   &trans          &trans    &trans       
             >;
         };
     };
